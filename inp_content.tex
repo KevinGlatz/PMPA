@@ -145,10 +145,57 @@ Mit JavaScript werden wir kleinere Features hinzufügen wie AJAX, eine Abruffunk
 \chapter{Problemanalyse}
 \section{USE-Case-Analyse}
 \begin{itemize}
-	\item UseCases auf Basis von Benutzerzielen identifizieren: 
+	\item UseCases auf Basis vom Benutzer: 
 	\begin{itemize}
-		\item Benutzer eines Systems identifizieren
+		\item Die verschiedenen Anwender unseres Systems:
+			\begin{itemize}
+				\item GAST - Die Rolle eines gewöhnlichen Benutzers wäre Gast. Er hat keinen Account sondern automatisch Gastrechte. Dieser Account erhält keinerlei Punkte als Belohnung für eine richtig gelöste Antwort. Der Gastuser erhält nach jeder Frage ein Pop-Up zur Anmeldung, so dass er auch Punkte sammeln kann. 
+				\item STANDARDBENUTZER - ist die Rolle eines jeden Users der einen Account erstellt hat. Dieser kann Punkte sammeln und Feedback auf verschiedene Fragen geben, indem er einen Daumen nach oben oder unten gibt. Neben dem Punkte sammeln und dem Fragen beantworten, kann dieser sogenannte Standardbenutzer auch Fragen erstellen.
+				\item AUTOR - hat die Aufgabe Fragen aus zu sortieren die zu viel negatives Feedback erhalten haben. Dies ist aber nur in Relation mit den Daumen nach oben zu sehen. Mindestanforderung für eine Frage zum Aussortieren sind 30 Prozent mehr negatives Feedback als Positiv. 
+				\item ADMINISTRATOR - hat die Rolle die Applikation auf den neuesten Technischen Stand zu halten. Er kann genau so die Tätigkeiten eines Administrators oder Standardbenutzers machen. 
+			\end{itemize} 
 		\item Benutzerziele identifizieren (Interviews)
+			\begin{itemize}
+				\item Gast
+					\begin{itemize}
+						\item Anmelden
+						\item Fragen beantworten
+					\end{itemize}
+				\item Standardbenutzer
+					\begin{itemize}
+						\item Anmelden
+						\item Fragen beantworten
+						\item Fragen erstellen
+						\item Feedback geben
+						\item Punkte erhalten
+						\item Profilübersicht
+						\item Analyse über Fragen
+					\end{itemize}
+				\item Autor
+					\begin{itemize}
+						\item Anmelden
+						\item Fragen beantworten
+						\item Feedback erstellen
+						\item Fragen erstellen
+						\item Punkte erhalten
+						\item Profilübersicht
+						\item Verwaltung der Fragen
+						\item Backendzugang
+					\end{itemize}
+				\item Administrator
+					\begin{itemize}
+						\item Anmelden
+						\item Fragen beantworten
+						\item Feedback erstellen
+						\item Fragen erstellen
+						\item Punkte erhalten
+						\item Profilübersicht
+						\item Verwaltung der Fragen
+						\item Backendzugang
+						\item Updates einschalten
+						\item Zugriff auf Code
+					\end{itemize}
+			\end{itemize} 
 		\item Use-Case-Liste pro Benutzer definieren
 	\end{itemize}
 	\item UseCases auf Basis von Ereignissen identifizieren: 
